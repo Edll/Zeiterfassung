@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Zeiterfassung</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="gretting">Hallo</string>
+    <string name="tag_beginn">Tag beginnen</string>
     <string name="action_settings">Settings</string>
 </resources>
