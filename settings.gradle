@@ -1,1 +1,1 @@
-include ':zeiterfassung'
+include ':app'
