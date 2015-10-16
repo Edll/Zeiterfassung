@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Zeiterfassung</string>
 
-    <string name="gretting">Hallo</string>
-    <string name="tag_beginn">Tag beginnen</string>
-    <string name="action_settings">Settings</string>
+    <string name="begrussung1">Hallo</string>
+    <string name="einstempeln">Einstempeln</string>
+    <string name="action_settings">Einstellungen</string>
 </resources>
