@@ -4,4 +4,16 @@
     <string name="begrussung1">Hello</string>
     <string name="einstempeln">check in</string>
     <string name="action_settings">Settings</string>
+    <string name="uhrzeit">00.00.00 00:00</string>
+    <string name="mitarbeiterName">Mitarbeiter Name</string>
+    <string name="action_heute">Today</string>
+    <string name="action_gestern">Yesterday</string>
+    <string name="action_nachstempeln">Late CheckIn</string>
+
+    <string-array name="stempel_arten">
+        <item>Büro</item>
+        <item>Kunde</item>
+        <item>Werkstatt</item>
+        <item>Home Office</item>
+    </string-array>
 </resources>

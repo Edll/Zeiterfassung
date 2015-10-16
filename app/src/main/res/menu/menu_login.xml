@@ -1,6 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".LoginActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+    <item android:id="@+id/action_heute" android:title="@string/action_heute"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_gestern" android:title="@string/action_gestern"
+        android:orderInCategory="101" app:showAsAction="never" />
+    <item android:id="@+id/action_nachstempeln" android:title="@string/action_nachstempeln"
+        android:orderInCategory="102" app:showAsAction="never" />
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="103" app:showAsAction="never" />
 </menu>

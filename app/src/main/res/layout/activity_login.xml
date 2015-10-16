@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
 
-    <TextView android:text="@string/gretting" android:layout_width="wrap_content"
+    <TextView android:text="@string/begrussung1" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textColor="#000000"
@@ -14,7 +14,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tag_beginn"
+        android:text="@string/einstempeln"
         android:id="@+id/button"
         android:layout_marginTop="34dp"
         android:layout_below="@+id/textView"
