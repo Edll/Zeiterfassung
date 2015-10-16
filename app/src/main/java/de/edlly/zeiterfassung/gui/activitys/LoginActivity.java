@@ -1,9 +1,11 @@
-package de.edlly.zeiterfassung;
+package de.edlly.zeiterfassung.gui.activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import de.edlly.zeiterfassung.R;
 
 public class LoginActivity extends AppCompatActivity {
 
