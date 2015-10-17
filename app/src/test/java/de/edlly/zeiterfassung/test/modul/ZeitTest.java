@@ -26,7 +26,7 @@ public class ZeitTest extends TestCase {
         zeit.set(aktuelleZeit.getTime().getTime());
 
         String dateTime = zeit.getDateTime();
-        assertTrue("Das Format stimmt nicht: " + dateTime, TestUtil.regExDatumString(dateTime));
+        assertTrue("Das Format stimmt nicht: " + dateTime, TesterUtil.regExDatumString(dateTime));
     }
 
 }

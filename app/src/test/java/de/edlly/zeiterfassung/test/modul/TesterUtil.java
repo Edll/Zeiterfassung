@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class TestUtil {
+public class TesterUtil {
 
     static boolean regExDatumString(String datum) {
 

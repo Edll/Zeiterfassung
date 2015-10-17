@@ -1,72 +1,65 @@
 package de.edlly.zeiterfassung.gui.activitys;
 
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import de.edlly.zeiterfassung.R;
+import de.edlly.zeiterfassung.model.IUpdateTask;
+import de.edlly.zeiterfassung.controller.Uhr;
 import de.edlly.zeiterfassung.model.AktuelleZeit;
 import de.edlly.zeiterfassung.model.IZeit;
 
-public class EinstempelnActivity extends AppCompatActivity {
-    private Timer updateUhr;
-    private IZeit zeit = new AktuelleZeit();
+public class EinstempelnActivity extends AppCompatActivity implements IUpdateTask {
+    private Uhr uhr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateUhr = new Timer();
+        uhr = new Uhr(this);
         Uhr();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        updateUhr.schedule(new UpdateUhr(new Handler(), this), 0, 60000);
+        uhr.startUhr();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        updateUhr.purge();
+        uhr.stopUhr();
+    }
+
+
+    @Override
+    public void update() {
+        Uhr();
     }
 
     public void Uhr() {
+
         setContentView(R.layout.activity_einstempeln);
         TextView uhrzeit = new TextView(this);
-        uhrzeit = (TextView) findViewById(R.id.textUhrzeit);
-        uhrzeit.setText((CharSequence) zeit.getDateTime());
-    }
-
-    private class UpdateUhr extends TimerTask {
-        Handler handler;
-        EinstempelnActivity ref;
-
-        public UpdateUhr(Handler handler, EinstempelnActivity ref) {
-            super();
-            this.handler = handler;
-            this.ref = ref;
-        }
-
-        @Override
-        public void run() {
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
-                    ref.Uhr();
-                }
-            });
-
-        }
+        uhr.uhrGet((TextView) findViewById(R.id.textUhrzeit));
     }
 
 
@@ -91,4 +84,6 @@ public class EinstempelnActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
