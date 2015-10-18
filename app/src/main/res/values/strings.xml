@@ -17,5 +17,8 @@
         <item>Werkstatt</item>
         <item>Home Office</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="abschied">Auf Wiedersehen</string>
+    <string name="einstempeltUm">Eingestempelt um: </string>
 
 </resources>

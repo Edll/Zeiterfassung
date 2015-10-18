@@ -1,20 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="BSGTheme" parent="@style/Theme.AppCompat.Light">
-        <item name="android:icon">@mipmap/ic_launcher</item>
+
         <item name="colorPrimary">@color/bsg_primary</item>
         <item name="colorPrimaryDark">@color/bsg_primary_dark</item>
-        <item name="colorAccent">@color/bsg_accent_material_light</item>
+        <item name="android:colorPrimary">@color/bsg_primary</item>
+        <item name="android:colorPrimaryDark">@color/bsg_primary_dark</item>
         <item name="android:colorBackground">@color/bsg_background_light</item>
         <item name="android:colorForeground">@color/bsg_foreground</item>
+        <item name="colorAccent">@color/bsg_accent_material_light</item>
+
         <item name="android:textColorPrimary">@color/bsg_text_primary</item>
 
-        <item name="colorButtonNormal">@color/bsg_primary_dark</item>
-
+        <item name="android:navigationBarColor">@color/bsg_navigation_bar</item>
+        <item name="android:statusBarColor">@color/bsg_status_bar</item>
         <item name="actionBarStyle">@style/ActionBarBSG</item>
-
-        <item name="android:textColorPrimaryInverse">@color/bsg_primary_text_inverse</item>
-
+        <item name="android:buttonStyle">@style/ButtonBSG</item>
     </style>
 
     <style name="ActionBarBSG" parent="@style/Widget.AppCompat.ActionBar">
@@ -28,4 +30,11 @@
     <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/bsg_text_actionbar</item>
     </style>
-  </resources>
+
+
+    <style name="ButtonBSG" parent="@style/Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/bsg_primary_dark</item>
+        <item name="android:colorButtonNormal">@color/bsg_primary_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

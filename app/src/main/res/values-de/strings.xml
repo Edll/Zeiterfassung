@@ -10,6 +10,7 @@
     <string name="action_gestern">Gestern</string>
     <string name="action_nachstempeln">Nachstempeln</string>
     <string name="ausstempeln">ausstempeln</string>
+    <string name="abschied">Auf Wiedersehen</string>
 
     <string-array name="stempel_arten">
         <item>Büro</item>
@@ -17,4 +18,6 @@
         <item>Werkstatt</item>
         <item>Home Office</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="einstempeltUm">Eingestempelt um: </string>
 </resources>
