@@ -7,12 +7,12 @@ import android.view.MenuItem;
 
 import de.edlly.zeiterfassung.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class AusstempelnActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_ausstempeln);
     }
 
     @Override

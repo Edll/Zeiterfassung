@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.edlly.zeiterfassung">
+    package="de.edlly.zeiterfassung"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="ALPHA">
+
+    <uses-sdk
+        android:maxSdkVersion="23"
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <uses-configuration
+        android:reqFiveWayNav="false"
+        android:reqHardKeyboard="false"
+        android:reqKeyboardType="nokeys"
+        android:reqNavigation="nonav"
+        android:reqTouchScreen="finger" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <activity android:name=".gui.activitys.EinstempelnActivity">
+        android:screenOrientation="portrait"
+        android:theme="@style/BSGTheme">
+
+        <activity
+            android:name=".gui.activitys.EinstempelnActivity"
+            android:allowEmbedded="true"
+            android:label="@string/app_name"
+            android:launchMode="standard">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="de.edlly.zeiterfassung.EINSTEMPELN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="de.edlly.zeiterfassung.gui.activitys.EinstempelnActivity"
+                android:value="@string/app_name" />
         </activity>
-        <activity
-            android:name=".gui.activitys.LoginActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity
+            android:name=".gui.activitys.AusstempelnActivity"
+            android:label="@string/ausstempeln">
+            <intent-filter>
+                <action android:name="de.edlly.zeiterfassung.gui.activitys.AUSSTEMPELN" />
             </intent-filter>
         </activity>
 

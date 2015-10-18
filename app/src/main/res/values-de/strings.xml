@@ -9,6 +9,7 @@
     <string name="action_heute">Heute</string>
     <string name="action_gestern">Gestern</string>
     <string name="action_nachstempeln">Nachstempeln</string>
+    <string name="ausstempeln">ausstempeln</string>
 
     <string-array name="stempel_arten">
         <item>Büro</item>
