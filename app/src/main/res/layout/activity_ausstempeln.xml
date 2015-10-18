@@ -1,24 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="de.edlly.zeiterfassung.gui.activitys.EinstempelnActivity">
 
-    <TextView android:text="@string/begrussung1" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textColor="#000000"
-        android:id="@+id/textView" />
 
-    <Button
+    <TextView
+        android:id="@+id/textViewAbschied"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/einstempeln"
-        android:id="@+id/button"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_gravity="center"
+        android:text="@string/abschied"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textEingestempeltUm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="@string/einstempeltUm"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/textEinstempelZeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/uhrzeit"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textUhrzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/uhrzeit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="35sp" />
+
+
+
+
+
+    <Button
+        android:id="@+id/buttonAusstemplen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:background="@drawable/bsg_ausstempeln_button"
+        android:text="@string/ausstempeln"
+        android:textColor="@color/bsg_einstempeln_text"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

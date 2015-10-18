@@ -1,16 +1,19 @@
 package de.edlly.zeiterfassung.gui.activitys;
 
-import android.support.v7.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import de.edlly.zeiterfassung.R;
 import de.edlly.zeiterfassung.model.IUpdateTask;
 import de.edlly.zeiterfassung.controller.Uhr;
-import de.edlly.zeiterfassung.model.AktuelleZeit;
-import de.edlly.zeiterfassung.model.IZeit;
 
 public class EinstempelnActivity extends AppCompatActivity implements IUpdateTask {
     private Uhr uhr;
@@ -26,6 +29,14 @@ public class EinstempelnActivity extends AppCompatActivity implements IUpdateTas
     protected void onStart() {
         super.onStart();
         uhr.startUhr();
+    }
+
+    public void einstempeln() {
+        Toast.makeText(this, "Eingestempelt", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, AusstempelnActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -66,9 +77,19 @@ public class EinstempelnActivity extends AppCompatActivity implements IUpdateTas
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_stemplen, menu);
+
+        Button buttonEinstempeln = (Button) findViewById(R.id.buttonEinstempeln);
+        buttonEinstempeln.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                einstempeln();
+            }
+        });
+
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
