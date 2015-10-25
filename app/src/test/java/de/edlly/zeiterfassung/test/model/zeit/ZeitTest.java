@@ -1,8 +1,9 @@
-package de.edlly.zeiterfassung.test.modul;
+package de.edlly.zeiterfassung.test.model.zeit;
 
 import junit.framework.TestCase;
 
-import de.edlly.zeiterfassung.model.*;
+import de.edlly.zeiterfassung.model.zeit.IZeit;
+import de.edlly.zeiterfassung.model.zeit.Zeit;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

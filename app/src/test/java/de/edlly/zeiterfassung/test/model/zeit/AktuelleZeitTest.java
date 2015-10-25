@@ -1,8 +1,9 @@
-package de.edlly.zeiterfassung.test.modul;
+package de.edlly.zeiterfassung.test.model.zeit;
 
 import junit.framework.TestCase;
 
-import de.edlly.zeiterfassung.model.*;
+import de.edlly.zeiterfassung.model.zeit.AktuelleZeit;
+import de.edlly.zeiterfassung.model.zeit.IZeit;
 
 public class AktuelleZeitTest extends TestCase {
     private IZeit zeit;

@@ -1,4 +1,4 @@
-package de.edlly.zeiterfassung.test.modul;
+package de.edlly.zeiterfassung.test.model.zeit;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package de.edlly.zeiterfassung.model;
+package de.edlly.zeiterfassung.model.zeit;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

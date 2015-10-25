@@ -1,15 +1,13 @@
 package de.edlly.zeiterfassung.controller;
 
 import android.os.Handler;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.Timer;
 
-import de.edlly.zeiterfassung.R;
-import de.edlly.zeiterfassung.model.AktuelleZeit;
+import de.edlly.zeiterfassung.model.zeit.AktuelleZeit;
 import de.edlly.zeiterfassung.model.IUpdateTask;
-import de.edlly.zeiterfassung.model.IZeit;
+import de.edlly.zeiterfassung.model.zeit.IZeit;
 import de.edlly.zeiterfassung.model.IntervallUpdateTask;
 
 public class Uhr {
