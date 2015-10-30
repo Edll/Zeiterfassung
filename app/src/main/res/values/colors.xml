@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Haupt Farben -->
     <color name="bsg_primary">#e2e2e3</color>
     <color name="bsg_primary_dark">#375099</color>
-    <color name="bsg_background_light">#ffffff</color>
-    <color name="bsg_accent_material_light">#ec9234</color>
-
+    <color name="bsg_accent">#ec9234</color>
     <color name="bsg_foreground">#cbcbcb</color>
 
-    <color name="bsg_navigation_bar">#ffffff</color>
-    <color name="bsg_status_bar">#ffffff</color>
+    <!-- System Navigations Farben -->
+    <color name="bsg_navigation_bar">#000000</color>
+    <color name="bsg_status_bar">#000000</color>
 
+    <!-- Actionbar Farben -->
     <color name="bsg_text_primary">#000000</color>
     <color name="bsg_text_actionbar">#ffffff</color>
-    <color name="bsg_primary_text_disabled_material_dark">#4dffffff</color>
-    <color name="bsg_primary_text_default_material_dark">#ffffff</color>
-    <color name="bsg_primary_text_inverse">#ffffff</color>
+    <color name="bsg_actionbar_background">#375099</color>
+
+    <!-- Button Farben -->
+    <color name="bsg_button">#fff0b97f</color>
 
     <color name="bsg_einstempeln_press">#FF347838</color>
     <color name="bsg_einstempeln">#C3347838</color>
@@ -23,8 +26,4 @@
     <color name="bsg_austempeln_press">#d15745</color>
     <color name="bsg_austempeln">#ea6f5d</color>
     <color name="bsg_austempeln_text">#000000</color>
-
-    <color name="bsg_button">#fff0b97f</color>
-
-
 </resources>

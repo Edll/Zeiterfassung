@@ -43,6 +43,5 @@ public class Uhr {
     public void uhrGet(TextView view){
         zeit = new AktuelleZeit();
         view.setText((CharSequence) zeit.getDateTime());
-        System.out.println("Uhr Update: " + zeit.getDateTime());
     }
 }

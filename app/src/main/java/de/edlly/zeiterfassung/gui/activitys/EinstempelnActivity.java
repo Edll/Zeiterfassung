@@ -1,9 +1,9 @@
 package de.edlly.zeiterfassung.gui.activitys;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +15,7 @@ import de.edlly.zeiterfassung.R;
 import de.edlly.zeiterfassung.model.IUpdateTask;
 import de.edlly.zeiterfassung.controller.Uhr;
 
-public class EinstempelnActivity extends AppCompatActivity implements IUpdateTask {
+public class EinstempelnActivity extends Activity implements IUpdateTask {
     private Uhr uhr;
 
     @Override

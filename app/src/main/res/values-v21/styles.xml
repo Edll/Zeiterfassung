@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BSGTheme" parent="@style/Theme.AppCompat.Light">
+    <style name="BSGTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/bsg_primary</item>
-        <item name="colorPrimaryDark">@color/bsg_primary_dark</item>
         <item name="android:colorPrimary">@color/bsg_primary</item>
-        <item name="android:colorPrimaryDark">@color/bsg_primary_dark</item>
-        <item name="android:colorBackground">@color/bsg_background_light</item>
-        <item name="android:colorForeground">@color/bsg_foreground</item>
-        <item name="colorAccent">@color/bsg_accent_material_light</item>
-
-        <item name="android:textColorPrimary">@color/bsg_text_primary</item>
-
         <item name="android:navigationBarColor">@color/bsg_navigation_bar</item>
         <item name="android:statusBarColor">@color/bsg_status_bar</item>
-        <item name="actionBarStyle">@style/ActionBarBSG</item>
-        <item name="android:buttonStyle">@style/ButtonBSG</item>
+
+        <item name="android:actionBarStyle">@style/ActionBarBSG</item>
     </style>
 
-    <style name="ActionBarBSG" parent="@style/Widget.AppCompat.ActionBar">
+    <style name="ActionBarBSG" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">@color/bsg_primary_dark</item>
         <item name="background">@color/bsg_primary_dark</item>
         <item name="displayOptions">showTitle</item>
-        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
-    </style>
-
-    <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <!-- wird nicht übernommen! -->
         <item name="android:textColor">@color/bsg_text_actionbar</item>
-    </style>
-
-
-    <style name="ButtonBSG" parent="@style/Widget.AppCompat.Button">
-        <item name="colorButtonNormal">@color/bsg_primary_dark</item>
-        <item name="android:colorButtonNormal">@color/bsg_primary_dark</item>
-        <item name="android:textColor">@android:color/white</item>
     </style>
 </resources>
