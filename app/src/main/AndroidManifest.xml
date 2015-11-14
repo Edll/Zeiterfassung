@@ -51,6 +51,7 @@
                 <action android:name="de.edlly.zeiterfassung.gui.activitys.AUSSTEMPELN" />
             </intent-filter>
         </activity>
+        <service android:name=".controller.StempelService" />
     </application>
 
 </manifest>
