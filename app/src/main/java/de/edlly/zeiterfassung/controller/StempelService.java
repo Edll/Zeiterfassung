@@ -76,10 +76,19 @@ public class StempelService extends Service {
             new Thread(){
                 public void run(){
                     runnable.setStempelGet(stempel);
+                    wartenFuerTest();
                     stempelHandler.post(runnable);
 
                 }
             }.start();
+        }
+
+        private void wartenFuerTest(){
+            try{
+                Thread.sleep(3000);
+            }catch(InterruptedException e){
+
+            }
         }
 
     }
