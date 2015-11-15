@@ -14,6 +14,7 @@ public class Uhr {
     private Timer updateUhr;
     private IUpdateTask ref;
     private IntervallUpdateTask task;
+    private Handler handler = new Handler();
     private IZeit zeit;
 
     public static final long UHR_UPDATE_INTERVALL = 30000L;
@@ -25,14 +26,18 @@ public class Uhr {
 
     public void startUhr(long updateIntervall) {
         updateUhr = new Timer();
-        task = new IntervallUpdateTask(new Handler(), ref);
+        task = new IntervallUpdateTask(handler, ref);
         updateUhr.schedule(task, 0, updateIntervall);
+
     }
 
     public void startUhr() {
         startUhr(UHR_UPDATE_INTERVALL);
     }
 
+    public void setHandler(Handler handler){
+        this.handler = handler;
+    }
 
     public void stopUhr() {
         task.cancel();

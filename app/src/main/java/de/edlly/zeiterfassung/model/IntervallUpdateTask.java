@@ -24,6 +24,7 @@ public class IntervallUpdateTask extends TimerTask {
         handler.post(new Runnable() {
             @Override
             public void run() {
+
                 ref.update();
             }
         });
