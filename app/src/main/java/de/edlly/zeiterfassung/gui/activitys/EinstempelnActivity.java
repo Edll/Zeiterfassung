@@ -22,6 +22,8 @@ import de.edlly.zeiterfassung.model.IUpdateTask;
 import de.edlly.zeiterfassung.controller.Uhr;
 import de.edlly.zeiterfassung.model.stempeln.IStempelOrt;
 import de.edlly.zeiterfassung.model.stempeln.Stempel;
+import de.edlly.zeiterfassung.model.stempeln.StempelException;
+import de.edlly.zeiterfassung.model.stempeln.StempelListe;
 import de.edlly.zeiterfassung.model.stempeln.StempelOrt;
 import de.edlly.zeiterfassung.model.zeit.AktuelleZeit;
 
@@ -33,7 +35,7 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     private ServiceConnection stempelService = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            stempelBinder =(StempelService.StempelServiceBinder) service;
+            stempelBinder = (StempelService.StempelServiceBinder) service;
             stempelBinder.setCallbackHandler(stempelCallbackHandler);
             stempelBinder.setRunnable(new RunnableStempel());
 
@@ -48,12 +50,14 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         uhr = new Uhr(this);
         Uhr();
 
         final Intent stempelIntent = new Intent(this, StempelService.class);
 
-        bindService( stempelIntent,  stempelService, BIND_AUTO_CREATE);
+        bindService(stempelIntent, stempelService, BIND_AUTO_CREATE);
+
     }
 
 
@@ -63,30 +67,40 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
         uhr.startUhr();
     }
 
-    public void einstempeln() {
+    public void einstempeln(View view) {
         Stempel stempel = new Stempel();
-        stempel.set(new AktuelleZeit(), IStempelOrt.StempelArt.KOMMEN, new StempelOrt()) ;
+        stempel.set(new AktuelleZeit(), IStempelOrt.StempelArt.KOMMEN, new StempelOrt());
 
         stempelBinder.stempeln(stempel);
-       // Toast.makeText(this, "Eingestempelt", Toast.LENGTH_SHORT).show();
 
-      //  Intent intent = new Intent(this, AusstempelnActivity.class);
-      //  startActivity(intent);
-      //  finish();
+        Toast.makeText(this, this.getString(R.string.einstempeln), Toast.LENGTH_SHORT).show();
     }
 
-    public class RunnableStempel implements Runnable{
-        private Stempel stempelGet;
+    public void weiterleiten() {
 
-        public void setStempelGet(Stempel stempelGet) {
-            this.stempelGet = stempelGet;
+        Intent intent = new Intent(this, AusstempelnActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void stempelExceptionAnzeige(StempelException e){
+        Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+    }
+
+    public class RunnableStempel implements Runnable {
+        private StempelListe listeLocal;
+
+        public void setStempelGet(StempelListe liste) {
+            this.listeLocal = liste;
+        }
+
+        public void stempelError(StempelException e){
+            stempelExceptionAnzeige(e);
         }
 
         @Override
         public void run() {
-
-            final TextView uhrzeit = (TextView) findViewById(R.id.textUhrzeit);
-            uhrzeit.setText("FUCK Service Läuft!");
+            weiterleiten();
 
         }
     }
@@ -113,7 +127,7 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     }
 
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         stempelCallbackHandler.removeCallbacksAndMessages(null);
         unbindService(stempelService);
         stopService(new Intent(this, StempelService.class));
@@ -139,15 +153,6 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_stemplen, menu);
-
-        Button buttonEinstempeln = (Button) findViewById(R.id.buttonEinstempeln);
-        buttonEinstempeln.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                einstempeln();
-            }
-        });
-
         return true;
     }
 

@@ -20,4 +20,6 @@
     </string-array>
     <string name="title_activity_main">MainActivity</string>
     <string name="einstempeltUm">Eingestempelt um: </string>
+    <string name="txt_wo_bist_du">Wo bist du?</string>
+    <string name="txt_eingestempelt">Eingestempelt!</string>
 </resources>

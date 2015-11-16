@@ -19,8 +19,7 @@ import de.edlly.zeiterfassung.model.stempeln.StempelListe;
 public class StempelService extends Service {
 
     // Objekt das im Service Verwaltet werden soll
-    private StempelListe stempelListe;
-
+    private StempelListe stempelListe = new StempelListe();
 
     // Binder für den Service
     private IBinder stempelBinder = new StempelServiceBinder();
@@ -32,7 +31,7 @@ public class StempelService extends Service {
     private EinstempelnActivity.RunnableStempel runnable;
 
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
     }
 
@@ -42,18 +41,18 @@ public class StempelService extends Service {
     }
 
     @Override
-    public boolean onUnbind(Intent intent){
+    public boolean onUnbind(Intent intent) {
         stempelHandler = null;
         return super.onUnbind(intent);
     }
 
-    public class StempelServiceBinder extends Binder{
+    public class StempelServiceBinder extends Binder {
 
-        public StempelListe getStempelListe(){
+        public StempelListe getStempelListe() {
             return stempelListe;
         }
 
-        public void setstempelListe(Stempel stempel){
+        public void setstempelListe(Stempel stempel) {
             try {
                 stempelListe.stempeln(stempel);
 
@@ -63,33 +62,32 @@ public class StempelService extends Service {
 
         }
 
-        public void setCallbackHandler(final Handler callback){
+        public void setCallbackHandler(final Handler callback) {
             stempelHandler = callback;
         }
 
-        public void setRunnable( final EinstempelnActivity.RunnableStempel runnableLocal){
+        public void setRunnable(final EinstempelnActivity.RunnableStempel runnableLocal) {
             runnable = runnableLocal;
         }
 
-        public void stempeln(final Stempel stempel){
+        public void stempeln(final Stempel stempel) {
 
-            new Thread(){
-                public void run(){
+            new Thread() {
+                public void run() {
+
+                    try {
+                        stempelListe.stempeln(stempel);
+
+                    } catch (StempelException e) {
+                        runnable.stempelError(e);
+                    }
+
                     runnable.setStempelGet(stempel);
-                    wartenFuerTest();
                     stempelHandler.post(runnable);
-
                 }
             }.start();
         }
 
-        private void wartenFuerTest(){
-            try{
-                Thread.sleep(3000);
-            }catch(InterruptedException e){
-
-            }
-        }
 
     }
 }

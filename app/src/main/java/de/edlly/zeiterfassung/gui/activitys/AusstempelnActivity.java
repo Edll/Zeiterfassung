@@ -1,14 +1,52 @@
 package de.edlly.zeiterfassung.gui.activitys;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import de.edlly.zeiterfassung.R;
+import de.edlly.zeiterfassung.controller.StempelService;
+import de.edlly.zeiterfassung.model.stempeln.StempelException;
+import de.edlly.zeiterfassung.model.stempeln.StempelListe;
 
 public class AusstempelnActivity extends Activity {
 
+
+    public void weiterleiten() {
+
+        Intent intent = new Intent(this, EinstempelnActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void stempelExceptionAnzeige(StempelException e){
+        Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+    }
+
+    public class RunnableAusStempel implements Runnable {
+        private StempelListe listeLocal;
+
+        public void setStempelGet(StempelListe liste) {
+            this.listeLocal = liste;
+        }
+
+        public void stempelError(StempelException e){
+            stempelExceptionAnzeige(e);
+        }
+
+        @Override
+        public void run() {
+            weiterleiten();
+
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
