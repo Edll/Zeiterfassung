@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.edlly.zeiterfassung"
+    package="de.bsg.zeiterfassung"
     android:installLocation="auto"
     android:versionCode="1"
     android:versionName="ALPHA" >
@@ -35,23 +35,34 @@
             android:launchMode="standard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="de.edlly.zeiterfassung.EINSTEMPELN" />
+                <action android:name="de.bsg.zeiterfassung.EINSTEMPELN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <meta-data
-                android:name="de.edlly.zeiterfassung.gui.activitys.EinstempelnActivity"
+                android:name="de.bsg.zeiterfassung.gui.activitys.EinstempelnActivity"
                 android:value="@string/app_name" />
         </activity>
         <activity
             android:name=".gui.activitys.AusstempelnActivity"
             android:label="@string/ausstempeln" >
             <intent-filter>
-                <action android:name="de.edlly.zeiterfassung.gui.activitys.AUSSTEMPELN" />
+                <action android:name="de.bsg.zeiterfassung.gui.activitys.AUSSTEMPELN" />
             </intent-filter>
         </activity>
-        <service android:name=".controller.StempelService" />
+
+        <service
+            android:name=".controller.StempelService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".gui.activitys.EinstellungenActivity"
+            android:label="@string/title_activity_einstellungen"
+            android:parentActivityName=".gui.activitys.EinstellungenActivity">
+        </activity>
     </application>
 
 </manifest>

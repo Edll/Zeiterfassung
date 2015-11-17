@@ -22,4 +22,7 @@
     <string name="einstempeltUm">Checked in:</string>
     <string name="txt_wo_bist_du">Were are you?</string>
     <string name="txt_eingestempelt">Eingestempelt!</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="title_activity_einstellungen">Settings</string>
 </resources>
