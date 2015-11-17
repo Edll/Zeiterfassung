@@ -21,7 +21,7 @@ public class TesterUtilUhr implements IUpdateTask {
 
 
     @Override
-    public void update() {
+    public void updateTask() {
       test = true;
     }
 

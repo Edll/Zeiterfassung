@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/abschied"
+        android:text="@string/txt_abschied"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -23,14 +23,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:text="@string/einstempeltUm"
+        android:text="@string/txt_eingestempelt_um"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     <TextView
         android:id="@+id/textEinstempelZeit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/uhrzeit"
+        android:text="@string/txt_datum_uhrzeit_platzhalter"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     <Space
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="@string/uhrzeit"
+        android:text="@string/txt_datum_uhrzeit_platzhalter"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="35sp" />
 
@@ -58,8 +58,8 @@
         android:layout_gravity="right"
         android:layout_margin="10dp"
         android:background="@drawable/bsg_ausstempeln_button"
-        android:text="@string/ausstempeln"
-        android:textColor="@color/bsg_einstempeln_text"
+        android:text="@string/txt_ausstempeln"
+        android:textColor="@color/bsg_btt_einstempeln_text"
         android:textSize="20sp" />
 
 

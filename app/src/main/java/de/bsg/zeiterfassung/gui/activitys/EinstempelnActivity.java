@@ -36,8 +36,8 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
         mitarbeiterNameAnzeigen();
 
         uhr = new Uhr(this);
-        Uhr();
-            }
+        uhr();
+    }
 
 
     @Override
@@ -57,12 +57,12 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
             stempelExceptionAnzeige(e);
         }
 
-        Toast.makeText(this, this.getString(R.string.einstempeln), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, this.getString(R.string.txt_einstempeln), Toast.LENGTH_SHORT).show();
 
         weiterleiten();
     }
 
-    public void mitarbeiterNameAnzeigen(){
+    public void mitarbeiterNameAnzeigen() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String string = sharedPreferences.getString("example_text", "");
 
@@ -109,12 +109,11 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     }
 
     @Override
-    public void update() {
-        Uhr();
+    public void updateTask() {
+        uhr();
     }
 
-    public void Uhr() {
-        TextView uhrzeit = new TextView(this);
+    public void uhr() {
         uhr.uhrGet((TextView) findViewById(R.id.textUhrzeit));
     }
 
@@ -122,7 +121,7 @@ public class EinstempelnActivity extends Activity implements IUpdateTask {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_stemplen, menu);
+        getMenuInflater().inflate(R.menu.menu_actionbar, menu);
         return true;
     }
 

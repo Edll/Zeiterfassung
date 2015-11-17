@@ -19,11 +19,14 @@
     <!-- Button Farben -->
     <color name="bsg_button">#fff0b97f</color>
 
-    <color name="bsg_einstempeln_press">#FF347838</color>
-    <color name="bsg_einstempeln">#C3347838</color>
-    <color name="bsg_einstempeln_text">#ffffff</color>
+    <color name="bsg_btt_einstempeln_press">#236026</color>
+    <color name="bsg_btt_einstempeln">#c3408344</color>
+    <color name="bsg_btt_einstempeln_text">#ffffff</color>
 
-    <color name="bsg_austempeln_press">#d15745</color>
-    <color name="bsg_austempeln">#ea6f5d</color>
-    <color name="bsg_austempeln_text">#000000</color>
+    <color name="bsg_btt_austempeln_press">#9e2f1e</color>
+    <color name="bsg_btt_austempeln">#e79d92</color>
+    <color name="bsg_btt_ausstempeln_text">#000000</color>
+
+    <color name="bsg_btt_greyed">#8b8b8b</color>
+    <color name="bsg_btt_greyed_text">#5e5e5e</color>
 </resources>

@@ -1,28 +1,36 @@
 <resources>
     <string name="app_name">Zeiterfassung</string>
 
-    <string name="begrussung1">Hallo</string>
-    <string name="einstempeln">Einstempeln</string>
-    <string name="action_settings">Einstellungen</string>
-    <string name="uhrzeit">00.00.00 00:00</string>
-    <string name="mitarbeiterName">Mitarbeiter Name</string>
-    <string name="action_heute">Heute</string>
-    <string name="action_gestern">Gestern</string>
-    <string name="action_nachstempeln">Nachstempeln</string>
-    <string name="ausstempeln">ausstempeln</string>
-    <string name="abschied">Auf Wiedersehen</string>
+    <string name="txt_begrussung1">Hallo</string>
+    <string name="txt_einstempeln">Einstempeln</string>
+    <string name="txt_datum_uhrzeit_platzhalter">00.00.00 00:00</string>
+    <string name="txt_ausstempeln">Ausstempeln</string>
+    <string name="txt_abschied">Auf Wiedersehen</string>
+    <string name="txt_wo_bist_du">Wo bist du?</string>
+    <string name="txt_meldung_eingestempelt">Eingestempelt!</string>
+    <string name="txt_produktiv_stunden">Produktiv Stunden:</string>
+    <string name="txt_uhrzeit_platzhalter">00:00</string>
+    <string name="txt_eingestempelt_um">Eingestempelt um:</string>
 
-    <string-array name="stempel_arten">
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_stempeluhr">Stempeluhr</string>
+
+
+    <string-array name="stempel_ort">
         <item>Büro</item>
         <item>Kunde</item>
         <item>Werkstatt</item>
         <item>Home Office</item>
     </string-array>
+
     <string name="title_activity_main">MainActivity</string>
-    <string name="einstempeltUm">Eingestempelt um: </string>
-    <string name="txt_wo_bist_du">Wo bist du?</string>
-    <string name="txt_eingestempelt">Eingestempelt!</string>
+    <string name="title_activity_einstellungen">Einstellungen</string>
+    <string name="title_activity_stempeluhr">Stempeluhr</string>
+
+
     <string name="pref_header_general">Haupteinstellungen</string>
     <string name="pref_header_notifications">Benachrichtigungen</string>
-    <string name="title_activity_einstellungen">Einstellungen</string>
+    <string name="pref_default_display_name">Mitarbeiter Name</string>
+    <string name="action_beenden">Beenden</string>
 </resources>

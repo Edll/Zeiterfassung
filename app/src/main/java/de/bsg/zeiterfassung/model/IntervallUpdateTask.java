@@ -5,7 +5,7 @@ import android.os.Handler;
 import java.util.TimerTask;
 
 /**
- * Stellt eine Update Task für die Uhr bereit. Ruft die Methode Update aus dem Interface IUpdateTask auf.
+ * Stellt eine Update Task für die uhr bereit. Ruft die Methode Update aus dem Interface IUpdateTask auf.
  * <p/>
  * Created by Edlly on 17.10.2015.
  */
@@ -25,7 +25,7 @@ public class IntervallUpdateTask extends TimerTask {
             @Override
             public void run() {
 
-                ref.update();
+                ref.updateTask();
             }
         });
 

@@ -12,6 +12,41 @@
         <item name="android:background">@color/bsg_primary_dark</item>
         <item name="background">@color/bsg_primary_dark</item>
         <item name="displayOptions">showTitle</item>
+        <item name="android:subtitleTextStyle">@style/BSGTheme.ActionBarBSG.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/BSGTheme.ActionBarBSG.TitleTextStyle</item>
+    </style>
+
+    <style name="BSGTheme.ActionBarBSG.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@color/bsg_text_actionbar</item>
+    </style>
+
+    <style name="Trennlinie">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="bsg_button_einstempeln">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/bsg_einstempeln_button</item>
+        <item name="android:textColor">@color/bsg_btt_einstempeln_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="bsg_button_ausstempel">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/bsg_ausstempeln_button</item>
+        <item name="android:textColor">@color/bsg_btt_ausstempeln_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="bsg_button_einstempeln_greyed">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/bsg_grayed_button</item>
+        <item name="android:textColor">@color/bsg_btt_greyed_text</item>
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

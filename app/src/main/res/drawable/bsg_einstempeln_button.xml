@@ -3,14 +3,14 @@
     <item android:state_pressed="true">
         <shape android:height="10dp">
 
-            <solid android:color="@color/bsg_einstempeln_press" />
+            <solid android:color="@color/bsg_btt_einstempeln_press" />
             <corners android:bottomLeftRadius="5dp" android:bottomRightRadius="5dp" android:radius="5dp" android:topLeftRadius="5dp" android:topRightRadius="5dp" />
         </shape>
     </item>
     <item>
         <shape android:height="1dp">
 
-            <solid android:color="@color/bsg_einstempeln" />
+            <solid android:color="@color/bsg_btt_einstempeln" />
             <corners android:bottomLeftRadius="5dp" android:bottomRightRadius="5dp" android:radius="5dp" android:topLeftRadius="5dp" android:topRightRadius="5dp" />
         </shape>
     </item>

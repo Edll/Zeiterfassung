@@ -16,7 +16,7 @@
             android:id="@+id/textViewBegrussung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/begrussung1"
+            android:text="@string/txt_begrussung1"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
-            android:text="@string/mitarbeiterName"
+            android:text="@string/pref_default_display_name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
@@ -46,7 +46,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:entries="@array/stempel_arten"
+        android:entries="@array/stempel_ort"
         android:spinnerMode="dropdown" />
 
     <Space
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="@string/uhrzeit"
+        android:text="@string/txt_datum_uhrzeit_platzhalter"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="35sp" />
 
@@ -72,8 +72,8 @@
         android:layout_margin="10dp"
         android:background="@drawable/bsg_einstempeln_button"
         android:onClick="einstempeln"
-        android:text="@string/einstempeln"
-        android:textColor="@color/bsg_einstempeln_text"
+        android:text="@string/txt_einstempeln"
+        android:textColor="@color/bsg_btt_einstempeln_text"
         android:textSize="20sp" />
 
 

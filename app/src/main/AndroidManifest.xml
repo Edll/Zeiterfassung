@@ -33,35 +33,33 @@
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:launchMode="standard" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="de.bsg.zeiterfassung.EINSTEMPELN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="de.bsg.zeiterfassung.gui.activitys.EinstempelnActivity"
                 android:value="@string/app_name" />
         </activity>
         <activity
             android:name=".gui.activitys.AusstempelnActivity"
-            android:label="@string/ausstempeln" >
+            android:label="@string/txt_ausstempeln" >
             <intent-filter>
                 <action android:name="de.bsg.zeiterfassung.gui.activitys.AUSSTEMPELN" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".controller.StempelService"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
-
         <activity
             android:name=".gui.activitys.EinstellungenActivity"
             android:label="@string/title_activity_einstellungen"
-            android:parentActivityName=".gui.activitys.EinstellungenActivity">
+            android:parentActivityName=".gui.activitys.EinstellungenActivity" >
+        </activity>
+        <activity
+            android:name=".gui.activitys.StempeluhrActivity"
+            android:label="@string/title_activity_stempeluhr"
+            android:icon="@mipmap/ic_launcher"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="de.bsg.zeiterfassung.EINSTEMPELN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

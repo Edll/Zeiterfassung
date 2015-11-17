@@ -39,8 +39,8 @@ public class UhrTest extends TestCase {
 
         //Thread.sleep(2000);
 
-        //assertFalse("Uhr flase", tester.isTest());
-       // assertTrue("Uhr wurde nicht getartet", tester.isTest());
+        //assertFalse("uhr flase", tester.isTest());
+       // assertTrue("uhr wurde nicht getartet", tester.isTest());
 
     }
 
@@ -56,7 +56,7 @@ public class UhrTest extends TestCase {
         uhr.startUhr(1L);
         uhr.stopUhr();
         // FIXME: Auf grund das der Handler ein Android OS part ist wird er im Unit test nicht ausgeführt! Anderen weg such
-       //  assertFalse("Uhr wurde nicht gestoppt", tester.isTest());
+       //  assertFalse("uhr wurde nicht gestoppt", tester.isTest());
 
     }
 

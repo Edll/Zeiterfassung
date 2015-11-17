@@ -1,28 +1,35 @@
 <resources>
     <string name="app_name">Zeiterfassung</string>
 
-    <string name="begrussung1">Hello</string>
-    <string name="einstempeln">check in</string>
-    <string name="action_settings">Settings</string>
-    <string name="uhrzeit">00.00.00 00:00</string>
-    <string name="mitarbeiterName">Mitarbeiter Name</string>
-    <string name="action_heute">Today</string>
-    <string name="action_gestern">Yesterday</string>
-    <string name="action_nachstempeln">Late CheckIn</string>
-    <string name="ausstempeln">ausstempeln</string>
-    <string name="abschied">Good Bye</string>
+    <string name="txt_begrussung1">Hello</string>
+    <string name="txt_einstempeln">checked in</string>
+    <string name="txt_datum_uhrzeit_platzhalter">00.00.00 00:00</string>
+    <string name="txt_ausstempeln">Ausstempeln</string>
+    <string name="txt_abschied">Good Bye</string>
+    <string name="txt_wo_bist_du">Were are you?</string>
+    <string name="txt_meldung_eingestempelt">Eingestempelt!</string>
+    <string name="txt_eingestempelt_um">Checked in:</string>
+    <string name="txt_produktiv_stunden">Produktiv Stunden:</string>
+    <string name="txt_uhrzeit_platzhalter">00:00</string>
 
-    <string-array name="stempel_arten">
+
+    <string name="action_settings">Settings</string>
+    <string name="action_stempeluhr">Time Clock</string>
+
+
+    <string-array name="stempel_ort">
         <item>Büro</item>
         <item>Kunde</item>
         <item>Werkstatt</item>
         <item>Home Office</item>
     </string-array>
+
     <string name="title_activity_main">MainActivity</string>
-    <string name="einstempeltUm">Checked in:</string>
-    <string name="txt_wo_bist_du">Were are you?</string>
-    <string name="txt_eingestempelt">Eingestempelt!</string>
+    <string name="title_activity_einstellungen">Settings</string>
+    <string name="title_activity_stempeluhr">time clock</string>
+
     <string name="pref_header_general">General</string>
     <string name="pref_header_notifications">Notifications</string>
-    <string name="title_activity_einstellungen">Settings</string>
+    <string name="pref_default_display_name">Mitarbeiter Name</string>
+    <string name="action_beenden">Shutdown</string>
 </resources>
