@@ -10,7 +10,7 @@ public interface IStempelOrt {
      *
      */
     //@formatter:off
-    public enum StempelArt {
+    enum StempelArt {
         DEFAULT(0, ""),
         KOMMEN(1, "Kommen"), 
         GEHEN(2, "Gehen"), 
@@ -44,7 +44,7 @@ public interface IStempelOrt {
      * @return Id des Status
      */
 
-    public int getId();
+    int getId();
 
     /**
      * Id des Status der Gesetz werden soll
@@ -53,7 +53,7 @@ public interface IStempelOrt {
      *            Nr des Status innerhalb des Systems
      */
 
-    public void setId(int id);
+    void setId(int id);
 
     /**
      * Anzeige Name des Status
@@ -61,7 +61,7 @@ public interface IStempelOrt {
      * @return gibt den Namen zurück.
      */
 
-    public String getName();
+    String getName();
 
     /**
      * Anzeige Name des Status
@@ -70,12 +70,12 @@ public interface IStempelOrt {
      *            des Status
      */
 
-    public void setName(String name);
+    void setName(String name);
 
-    public List<IStempelOrt> getOrtList();
+    List<IStempelOrt> getOrtList();
 
-    public void setOrtList(List<IStempelOrt> statusList);
+    void setOrtList(List<IStempelOrt> statusList);
 
-    public void createOrtList();
+    void createOrtList();
 
 }

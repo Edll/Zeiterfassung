@@ -8,25 +8,25 @@ public interface IStempelRegel {
      * Gibt die enum Regeln für vor dem Objekt.
      */
 
-    public StempelArt[] getBefore();
+    StempelArt[] getBefore();
 
     /**
      * Setz die enum Regeln für vor dem Objekt.
      */
 
-    public void setBefore(StempelArt[] before);
+    void setBefore(StempelArt[] before);
 
     /**
      * Gibt die enum Regeln für nach dem Objekt.
      */
 
-    public StempelArt[] getAfter();
+    StempelArt[] getAfter();
 
     /**
      * Setz die enum Regeln für nach dem Objekt.
      */
 
-    public void setAfter(StempelArt[] after);
+    void setAfter(StempelArt[] after);
 
     /**
      * Gibt die Regel für die gewählte Stempel Art zurück.
@@ -34,7 +34,7 @@ public interface IStempelRegel {
      * @return Regel für die Angefragte Stempel Art
      * @throws StempelException
      */
-    public IStempelRegel getRegel(StempelArt stempelArt) throws StempelException;
+    IStempelRegel getRegel(StempelArt stempelArt) throws StempelException;
 
     /**
      * Prüft die Regeln davor
@@ -43,7 +43,7 @@ public interface IStempelRegel {
      * 
      * @throws StempelException
      */
-    public boolean checkBefore(StempelArt stempelArt, StempelArt stempelArtBefor) throws StempelException;
+    boolean checkBefore(StempelArt stempelArt, StempelArt stempelArtBefor) throws StempelException;
 
     /**
      * Prüft die Regeln danach
@@ -51,7 +51,7 @@ public interface IStempelRegel {
      * @throws StempelException
      */
 
-    public boolean checkAfter(StempelArt stempelArt, StempelArt stempelArtAfter) throws StempelException;
+    boolean checkAfter(StempelArt stempelArt, StempelArt stempelArtAfter) throws StempelException;
 
     /**
      * Erstes Element das gestempelt wird
@@ -60,6 +60,6 @@ public interface IStempelRegel {
      * @return
      */
 
-    public boolean checkFirst(StempelArt status);
+    boolean checkFirst(StempelArt status);
 
 }

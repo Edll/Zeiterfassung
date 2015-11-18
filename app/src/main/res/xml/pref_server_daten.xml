@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_server_adresse"
+        android:inputType="textCapWords"
+        android:key="pref_server_adresse"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_server_adresse" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_server_login"
+        android:inputType="textCapWords"
+        android:key="pref_server_login"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_server_login" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_server_pass"
+        android:inputType="textPassword"
+        android:key="pref_server_pass"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_server_pass" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_server_refesh_time"
+        android:inputType="number"
+        android:key="pref_server_refesh_time"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_server_refesh_time" />
+
+</PreferenceScreen>

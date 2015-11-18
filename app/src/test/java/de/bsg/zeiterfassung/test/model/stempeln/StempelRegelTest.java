@@ -8,7 +8,7 @@ import de.bsg.zeiterfassung.model.stempeln.*;
 import junit.framework.TestCase;
 
 public class StempelRegelTest extends TestCase {
-    IStempelRegel regel;
+    private IStempelRegel regel;
 
     @Override
     public void setUp() {

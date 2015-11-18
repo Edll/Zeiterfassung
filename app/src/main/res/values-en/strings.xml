@@ -15,21 +15,25 @@
 
     <string name="action_settings">Settings</string>
     <string name="action_stempeluhr">Time Clock</string>
+    <string name="action_beenden">Shutdown</string>
 
 
-    <string-array name="stempel_ort">
-        <item>Büro</item>
-        <item>Kunde</item>
-        <item>Werkstatt</item>
-        <item>Home Office</item>
-    </string-array>
 
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_einstellungen">Settings</string>
     <string name="title_activity_stempeluhr">time clock</string>
 
+
     <string name="pref_header_general">General</string>
-    <string name="pref_header_notifications">Notifications</string>
     <string name="pref_default_display_name">Mitarbeiter Name</string>
-    <string name="action_beenden">Shutdown</string>
+    <string name="pref_title_display_name">Employee Name</string>
+    <string name="pref_server_daten">Server Connection Data</string>
+    <string name="pref_server_adresse">Server Adresse</string>
+    <string name="pref_header_server_data">Server Daten</string>
+    <string name="pref_server_login">Login Name</string>
+    <string name="pref_server_pass">password</string>
+    <string name="pref_server_refesh_time">Refresh Zyklus Zeit in Minuten</string>
+    <string name="action_nachstempeln">Nachstempeln</string>
+    <string name="action_projektverwaltung">Project</string>
+    <string name="action_monatsubersicht">Time Log Overview</string>
 </resources>

@@ -1,20 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".EinstempelnActivity">
+    tools:context=".gui.activitys.StempeluhrActivity">
     <item
         android:id="@+id/action_stempeluhr"
         android:orderInCategory="100"
         android:title="@string/action_stempeluhr"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_nachstempeln"
         android:orderInCategory="101"
+        android:title="@string/action_nachstempeln"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_stundenuebersicht"
+        android:orderInCategory="102"
+        android:title="@string/action_monatsubersicht"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_projektverwaltung"
+        android:orderInCategory="103"
+        android:title="@string/action_projektverwaltung"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="104"
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_beenden"
-        android:orderInCategory="102"
+        android:orderInCategory="105"
         android:title="@string/action_beenden"
         app:showAsAction="never" />
 

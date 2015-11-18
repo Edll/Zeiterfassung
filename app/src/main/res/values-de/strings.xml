@@ -15,22 +15,25 @@
 
     <string name="action_settings">Einstellungen</string>
     <string name="action_stempeluhr">Stempeluhr</string>
+    <string name="action_beenden">Beenden</string>
 
-
-    <string-array name="stempel_ort">
-        <item>Büro</item>
-        <item>Kunde</item>
-        <item>Werkstatt</item>
-        <item>Home Office</item>
-    </string-array>
 
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
     <string name="title_activity_stempeluhr">Stempeluhr</string>
 
 
-    <string name="pref_header_general">Haupteinstellungen</string>
-    <string name="pref_header_notifications">Benachrichtigungen</string>
+    <string name="pref_header_general">Persönliche Einstellungen</string>
     <string name="pref_default_display_name">Mitarbeiter Name</string>
-    <string name="action_beenden">Beenden</string>
+    <string name="pref_title_display_name">Mitarbeiter Name</string>
+
+    <string name="pref_server_daten">Server Daten</string>
+    <string name="pref_server_adresse">Server Adresse</string>
+    <string name="pref_header_server_data">Server Daten</string>
+    <string name="pref_server_login">Login Name</string>
+    <string name="pref_server_pass">Passwort</string>
+    <string name="pref_server_refesh_time">Refresh Zyklus Zeit in Minuten</string>
+    <string name="action_nachstempeln">Nachstempeln</string>
+    <string name="action_projektverwaltung">Projekt</string>
+    <string name="action_monatsubersicht">Stundenübersicht</string>
 </resources>

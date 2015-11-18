@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
  * Created by Edlly on 16.10.2015.
  */
 public class Zeit implements IZeit {
-    long zeit;
+    private long zeit;
 
     @Override
     public long get() {

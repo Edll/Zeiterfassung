@@ -5,6 +5,7 @@
     <string name="txt_begrussung1">Hallo</string>
     <string name="txt_einstempeln">Einstempeln</string>
     <string name="txt_ausstempeln">Ausstempeln</string>
+    <string name="txt_stempeln">Stempeln</string>
     <string name="txt_datum_uhrzeit_platzhalter">00.00.00 00:00</string>
     <string name="txt_uhrzeit_platzhalter">00:00</string>
     <string name="txt_abschied">Auf Wiedersehen</string>
@@ -27,47 +28,48 @@
         <item>Pause</item>
     </string-array>
 
+    <string-array name="monat_uebersicht">
+        <item>Oktober 2015</item>
+        <item>August 2015</item>
+        <item>September 2015</item>
+        <item>Dezember 2015</item>
+    </string-array>
+
+
+    <string-array name="stempel">
+        <item>Kommen</item>
+        <item>Gehen</item>
+        <item>Pause</item>
+    </string-array>
+
     <!-- ActionBar Menu  -->
-    <string name="action_settings">Einstellungen</string>
     <string name="action_stempeluhr">Stempeluhr</string>
+    <string name="action_nachstempeln">Nachstempeln</string>
+    <string name="action_monatsubersicht">Monat</string>
+    <string name="action_projektverwaltung">Projekt</string>
+    <string name="action_settings">Einstellungen</string>
     <string name="action_beenden">Beenden</string>
 
     <!-- Activity Title -->
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
-
-    <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
-
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
-    </string>
-
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">Mitarbeiter Name</string>
-
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
-
-    <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notifications</string>
-
-    <string name="pref_title_new_message_notifications">New message notifications</string>
-
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_ringtone_silent">Silent</string>
-
-    <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_stempeluhr">Stempeluhr</string>
+    <string name="title_activity_monatsuebersicht">Übersicht</string>
+    <string name="title_activity_tag_detail">Tag Detail</string>
+    <string name="title_activity_nachstempeln">Nachstempeln</string>
+
+    <!-- Settings -->
+    <string name="pref_header_general">Persönliche Einstellungen</string>
+    <string name="pref_title_display_name">Mitarbeiter Name</string>
+    <string name="pref_default_display_name">Vorname Nachname</string>
+
+    <!-- Server Daten -->
+    <string name="pref_header_server_data">Server Daten</string>
+    <string name="pref_server_adresse">Server Adresse</string>
+    <string name="pref_server_login">Login Name</string>
+    <string name="pref_server_pass">Passwort</string>
+    <string name="pref_server_refesh_time">Refresh Zyklus Zeit in Minuten</string>
+    <string name="pref_server_daten">Server Daten</string>
+
 
 </resources>

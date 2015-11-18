@@ -8,8 +8,8 @@ import de.bsg.zeiterfassung.model.stempeln.*;
 import junit.framework.TestCase;
 
 public class StempelListeTest extends TestCase {
-    StempelListe liste = new StempelListe();
-    StempelOrt ort;
+    private StempelListe liste = new StempelListe();
+    private StempelOrt ort;
 
     @Override
     public void setUp() {

@@ -6,7 +6,7 @@
         <item name="android:colorPrimary">@color/bsg_primary</item>
         <item name="android:navigationBarColor">@color/bsg_navigation_bar</item>
         <item name="android:statusBarColor">@color/bsg_status_bar</item>
-
+        <item name="android:colorAccent">@color/bsg_accent</item>
         <item name="android:actionBarStyle">@style/ActionBarBSG</item>
     </style>
 

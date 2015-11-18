@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StempelListe implements Serializable{
-    List<Stempel> list = new ArrayList<Stempel>();
-    IStempelRegel regel = new StempelRegel();
+    private List<Stempel> list = new ArrayList<Stempel>();
+    private IStempelRegel regel = new StempelRegel();
 
     public void stempeln(Stempel stempel) throws StempelException {
         if (list.size() > 0) {

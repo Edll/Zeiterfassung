@@ -2,8 +2,10 @@ package de.bsg.zeiterfassung.gui.activitys;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
+import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,6 +46,7 @@ public class StempeluhrActivity extends Activity implements IUpdateTask, View.On
     protected void onStart() {
         super.onStart();
         uhr.startUhr();
+        mitarbeiterNameAnzeigen();
     }
 
     @Override
@@ -67,18 +70,27 @@ public class StempeluhrActivity extends Activity implements IUpdateTask, View.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, EinstellungenActivity.class);
-            startActivity(intent);
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(this, EinstellungenActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_stempeluhr:
+                return true;
+            case R.id.action_stundenuebersicht:
+                Intent intentStudenUebersicht = new Intent(this, MonatsuebersichtActivity.class);
+                startActivity(intentStudenUebersicht);
+                return true;
+            case R.id.action_nachstempeln:
+                Intent intentNachstempeln = new Intent(this, NachstempelnActivity.class);
+                startActivity(intentNachstempeln);
+                return true;
+            case R.id.action_beenden:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -126,6 +138,14 @@ public class StempeluhrActivity extends Activity implements IUpdateTask, View.On
                 break;
         }
 
+    }
+
+    public void mitarbeiterNameAnzeigen() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String string = sharedPreferences.getString("pref_mitarbeiter_name", "");
+
+        TextView mitarbeiterName = (TextView) findViewById(R.id.textViewMitarbeiterName);
+        mitarbeiterName.setText(string);
     }
 
     public void buttonChangeEinstempeln() {

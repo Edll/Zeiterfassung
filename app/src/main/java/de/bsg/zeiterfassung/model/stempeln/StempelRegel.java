@@ -3,8 +3,8 @@ package de.bsg.zeiterfassung.model.stempeln;
 import de.bsg.zeiterfassung.model.stempeln.IStempelOrt.StempelArt;
 
 public class StempelRegel implements IStempelRegel {
-    StempelArt[] before;
-    StempelArt[] after;
+    private StempelArt[] before;
+    private StempelArt[] after;
 
     public StempelRegel() {
 

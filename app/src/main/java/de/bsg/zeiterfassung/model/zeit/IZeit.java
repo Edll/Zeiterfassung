@@ -10,19 +10,19 @@ public interface IZeit {
      *
      * @return Zeit in ms
      */
-    public long get();
+    long get();
 
     /**
      * Setz die Zeit im Objekt
      *
      * @param zeit als ms
      */
-    public void set(long zeit);
+    void set(long zeit);
 
     /**
      * Gibt die im Objekt stehende Zeit als String zurück
      *
      * @return Formatet String TT.MM.JJJJ - HH:MM
      */
-    public String getDateTime();
+    String getDateTime();
 }

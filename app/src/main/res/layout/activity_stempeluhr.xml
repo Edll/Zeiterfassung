@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/activity_layout_margin"
-    android:orientation="vertical"
     tools:context="de.bsg.zeiterfassung.gui.activitys.StempeluhrActivity">
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textViewMitarbeiterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="@string/pref_default_display_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/stempeluhr_datum_uhrzeit"
@@ -20,24 +29,6 @@
             android:text="@string/txt_datum_uhrzeit_platzhalter"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <Spinner
-            android:id="@+id/stempelart"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:entries="@array/stempel_ort"
-            android:spinnerStyle="@android:style/Widget.Spinner.DropDown"/>
-
-        <Button
-            android:id="@+id/buttonEinstempeln"
-            android:text="@string/txt_einstempeln"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            style="@style/bsg_button_einstempeln" />
-
         <View
             style="@style/Trennlinie"
             android:layout_marginBottom="15dp"
@@ -45,9 +36,13 @@
 
         <TableLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:stretchColumns="1">
-            <TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -62,7 +57,12 @@
                     android:padding="@dimen/table_padding"
                     android:text="@string/txt_uhrzeit_platzhalter"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow><TableRow>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,6 +86,25 @@
             android:layout_marginTop="15dp" />
 
         <Spinner
+            android:id="@+id/stempelart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/stempel_ort"
+            android:spinnerStyle="@android:style/Widget.Spinner.DropDown" />
+
+        <Button
+            android:id="@+id/buttonEinstempeln"
+            style="@style/bsg_button_einstempeln"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_einstempeln" />
+
+
+        <Spinner
             android:id="@+id/austempel_status"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -94,17 +113,14 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:entries="@array/ausstempel_grund"
-            android:spinnerStyle="@android:style/Widget.Spinner.DropDown"/>
+            android:spinnerStyle="@android:style/Widget.Spinner.DropDown" />
 
         <Button
             android:id="@+id/buttonAusstemplen"
+            style="@style/bsg_button_ausstempel"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@drawable/bsg_ausstempeln_button"
-            android:text="@string/txt_ausstempeln"
-            android:textColor="@color/bsg_btt_einstempeln_text"
-            android:textSize="20sp" />
+            android:layout_marginBottom="10dp"
+            android:text="@string/txt_ausstempeln" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

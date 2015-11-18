@@ -10,8 +10,8 @@ import java.util.TimerTask;
  * Created by Edlly on 17.10.2015.
  */
 public class IntervallUpdateTask extends TimerTask {
-    Handler handler;
-    IUpdateTask ref;
+    private Handler handler;
+    private IUpdateTask ref;
 
     public IntervallUpdateTask(Handler handler, IUpdateTask ref) {
         super();
